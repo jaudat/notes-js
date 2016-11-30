@@ -28,7 +28,16 @@ For example if we set the width of an element, as well as it's border and paddin
 }
 ```
 * With Content-Box: the width refers only to the content, therefore only the content is 800px, we then add the padding of 50px and lastly the border of 50px. So the total width of the element is 50px-50px-800px-50px-50px. This is weird because most people think of anything within the border as being within the element, therefore when we set the width to 800px, they would expect that to be the total width of the content+padding+border as those are within the element, but not the margin since most people think of it as being outside the element.
-* With Border-Box: The padding and border along with the content are included in the width and height of the element, as most people consider them to also be inside the element. therefore the element above will have the following width of border-padding-content-padding-border, 50px-50px-600px-50px-50px.
+* With Border-Box: The padding and border along with the content are included in the width and height of the element, as most people consider them to also be inside the element. therefore the element above will have the following width of border-padding-content-padding-border, 50px-50px-600px-50px-50px. However there is a catch, since this has been developed fairly recently so if we want to be sure that older browsers can also display it we need to add **browser specific prefixes**. 
+```css
+ {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+
+    box-sizing: border-box;
+}
+```
 
 ## Semantic Elements
 HTML is a markup language, meaning it describes a document. If we build websites using only divs, then it would be difficult to know what it is describing, and html would be failing its goal. We can use elements that are more descriptive then divs, these are called semantic elements. The following are the benefits of semantic elements:

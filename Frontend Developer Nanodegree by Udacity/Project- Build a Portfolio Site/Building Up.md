@@ -116,6 +116,13 @@ This is the point at which the page changes layout.
 **Grid Fluid System:** Columns end up wrapping to the next line as the browser width starts getting smaller
 
 ### Flexbox
+In normal block layout each element is positioned underneath the other in a container, but when we change the property of the container to `display: flex`, the elemenets will be shown in a row. This is because the default flex direction is row. Therefore by default the elements fit in a single row. So no matter what the width of the elements are they won't wrap, instead the browser will resize them to fit within the viewport on a single row. 
+
+This behavior can be changed by adding `flex-wrap: wrap` to the container div. Doing this will make the browser wrap the elements to the next line and will only resize the elements if it has too as there are no other options.
+
+We can also change the order of the elements that are in the container, by changing the `order` attribute of each child element of the flexbox container. The default order is the order of their markup. 
+
+
 
 
  

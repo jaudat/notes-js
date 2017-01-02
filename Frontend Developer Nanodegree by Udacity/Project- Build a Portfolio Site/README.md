@@ -14,8 +14,8 @@
     - [Common Responsive Patterns](Common Responsive Patterns.md)
     - [Optimizations](Optimizations.md)
 * Responsive Images
-    - [Getting Up and Running]()
-    - [Units, Formats, Enviroments]()
-    - [Images and Markup]()
-    - [Full Responsiveness]()
+    - [Getting Up and Running](Getting Up and Running.md)
+    - [Units, Formats, Enviroments](Units, Formats, Enviroments.md)
+    - [Images and Markup](Images and Markup.md)
+    - [Full Responsiveness](Full Responsiveness.md)
 * Project

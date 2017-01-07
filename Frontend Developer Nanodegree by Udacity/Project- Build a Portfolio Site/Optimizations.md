@@ -127,3 +127,6 @@ If the number of words in a line is too small then it is awkward to read, if the
 We need to consider how people read as we create our designs as it affects our layout. That is why we should consider line length when building sites and should take them into consideration when choosing breakpoints. 
 
 Fonts should be big enough to be read on any device. 14px can sometimes not be big enough. Therefore we could look into setting the base font to atleast 16px and atleast a 1.2em line height. On text heavy sites the line height and font size could even be increased.
+
+## Minor Breakpoints
+In addition to major breakpoints where the layout of the page changes it could also be helpful to add minor breakpoints where we can touch up the presentation such as the margins/paddings or the font size to make things easier to read and feel more natural in the layout.

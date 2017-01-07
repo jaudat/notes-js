@@ -16,6 +16,10 @@
 * Responsive Images
     - [Getting Up and Running](Getting Up and Running.md)
     - [Units, Formats, Enviroments](Units, Formats, Enviroments.md)
-    - [Images and Markup](Images and Markup.md)
+    - [Images with Markup](Images with Markup.md)
     - [Full Responsiveness](Full Responsiveness.md)
 * Project
+
+
+TIPS: 
+* In the Chrome DevTools we can highlight the element and then type $0 into the console to get it's properties. 

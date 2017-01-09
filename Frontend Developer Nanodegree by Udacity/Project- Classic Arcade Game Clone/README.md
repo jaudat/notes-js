@@ -1,19 +1,19 @@
 # PROJECT: Classic Arcade Game Clone
 
 * Object Oriented Javascript
-    - Scopes
-    - Closures
-    - `this` Keyword
-    - Prototype Chains
-    - Object Decorator Pattern
-    - Functional Classes
-    - Prototypal Classes
-    - Pseudoclassical Patterns
-    - Superclass and Subclasses
-    - Pseudoclassical Subclasses
+    - [Scopes](Scopes.md)
+    - [Closures](Closures.md)
+    - [The 'this' Keyword](The 'this' Keyword.md)
+    - [Prototype Chains](Prototype Chains.md)
+    - [Object Decorator Pattern](Object Decorator Pattern.md)
+    - [Functional Classes](Functional Classes.md)
+    - [Prototypal Classes](Prototypal Classes.md)
+    - [Pseudoclassical Patterns](Pseudoclassical Patterns.md)
+    - [Superclass and Subclasses](Superclass and Subclasses.md)
+    - [Pseudoclassical Subclasses](Pseudoclassical Subclasses.md)
 * HTML Canvas
-    - HTML5 Canvas Basics
-    - From Pixels to Animation
+    - [HTML5 Canvas Basics](HTML5 Canvas Basics.md)
+    - [From Pixels to Animation](From Pixels to Animation.md)
 * Writing Readmes
-    - Writing READMEs
+    - [Writing READMEs](Writing READMEs.md)
 * Project

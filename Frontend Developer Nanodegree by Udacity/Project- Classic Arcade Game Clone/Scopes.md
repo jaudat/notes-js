@@ -1,1 +1,25 @@
 # Scopes
+
+## Lexical Scopes
+There is a number of different ways people use the word scope and  the simplest of them is referred to as **Lexical Scope**. 
+This usage of the word describes the regions in your source code, where you can refer to a variable by name without getting access errors. In simple programs with no functions at all, there is exactly one scope which is called the **global scope**. Every variable in such a program would be stored there. Any variable in the global scope can be accessed from anywhere else in your whole program. 
+
+After defining a variable in a lexical scope, you may make reference to that variable from anywhere else in the lexical scope. Global variables are the easiest,since there is nowhere in your code that you couldn't access them. 
+
+A new lexical scope is created everytime you type out a function defination. The function defination spans from the letter `f` all the way down to the end curly brace. The two curly braces around the function's body enclosed the area of the code where different access rules will apply. Once we have made a new lexical scope by defining a function, it has a few more limits then the lexical scope around it. Although we can still access variables from the broader lexical scope containing that inner lexical scope, and we can access variables that get defined inside that inner scope, the variables that we define in the inner scope cannot be referred to from outside that scope.
+
+**NOTE 1:** That javascript allows us to assign to variables that we haven't declared before, like so `foil = aFoil();// Note how there is no 'var' keyword`. In this example `foil` has not been declared anywhere in our whole program, so it will be added automatically to the global scope and not to whatever scope we did the assignment in. This is a bad practice, because leaving the `var` keyword off is most often done by mistake and even if you meant it, other programmers may be confused and may assume it was a mistake. 
+
+**NOTE 2:** Unlike a lot of other languages not all curly braces in Javascript are relavent for scoping. Blocks on if statements or looping constructs like while statements etc. do not create new scopes. Only the curly braces that you find on a function statement creates a scope. 
+
+## Execution Contexts
+This is a somewhat different idea relating to a different usage of the word scope. When a program runs it builds up storage systems for holding the variables and their values. These in-memory scope structures are called **execution contexts**. They differ from lexical scopes in that they are built as the code runs, not as it is typed. The rules govern which variables a program has access to at different points during the execution. 
+
+As a program runs it will be building up internal data stores for keeping track of all the variables that are available to different function objects. Since each new run of a function is supposed to operate in complete isolation from all previous runs, a new execution context should be created everytime you run a function. Thus for each lexical scope there may be many in-memory scopes created during execution, or there may be none. It all depends on how many times you run a given function in a code. The in-memory scopes are key value mappings where the key is the variable name and the value is the variables's value. In the in-memory scopes if the value being assigned is a function it's defination will be stored as the value. The function will only be run if/once it is called. Once the function is run, it will create a new execution function.
+
+At this point the execution contexts looks a lot like a collection of key value pairs, sort of like an object. Now noticing that similarity it would be tempting to think that in-memory scopes and in-memory objects are somehow actually the same thing. This is a deceptive similarity since the two are kept so completely seperate by the interpreter. And there are so many more limits to our access to an execution context that don't exist for our access to an object. Many of the rules that we have learnt for objects will also happen to be true for execution contexts, but you can never mix and match the two in our programs. Despite the similarities, they live in completely different worlds that almost never interact. For example, we cannot store an array full of contexts to an in-memory scope even though we can do so with objects. Similarly we cannot iterate over the variable names in an execution context, the way we can over the keys of an object. So even though they are both key value data storage constructs, we will be interacting with the two in completely different ways.
+
+The interpreter looks for variables by scanning outwards from it's current context, looking for the closest containing context that can satisfy a requested name. 
+
+HINT: Look at last video under scopes, explains why creating two different arrays would be false when comparing using `===`. It is because they have different values because different execution context. 
+

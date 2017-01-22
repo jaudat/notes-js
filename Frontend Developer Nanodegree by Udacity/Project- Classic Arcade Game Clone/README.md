@@ -1,5 +1,7 @@
 # PROJECT: Classic Arcade Game Clone
 
+We will start of by talking about Scopes and Closures, since we really need to fully understand those aspects of functions and variable access, before we can move to more advanced topics of object oriented programming. Then we will discuss the parameter `this` and prototype delegation, which are the two main language features allowing for object-oriented javascript. Finally we will cover a number of different ways that you can write Javascript classes and subclasses.
+
 * Object Oriented Javascript
     - [Scopes](Scopes.md)
     - [Closures](Closures.md)
